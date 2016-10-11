@@ -19,7 +19,7 @@ URL: **[http://stark-coast-54840.heroku.com/](http://stark-coast-54840.heroku.co
     - Dinner
     - Drinks
 
-HINT: Video: [add a Section model and seed data](Video: add a Section model and seed data) (5m).
+HINT: Video: [add a Section model and seed data](https://www.opentest.co/share/dedccf108f7411e6b6684df5d82020c7) (5m).
 
 NOTE: there is nore than one way to do it.
 
