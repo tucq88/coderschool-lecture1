@@ -19,3 +19,12 @@
     width: 100%;
   }
 }
+
+.nav-item.active > a {
+  text-decoration: underline;
+}
+
+#contact-map {
+  height: 400px;
+  width: 100%;
+}

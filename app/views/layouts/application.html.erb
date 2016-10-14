@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAnAjX5ZNh-hfz2NOQSatoPxIphgaC-0UY" %>
+    <%= javascript_include_tag "https://hpneo.github.io/gmaps/gmaps.js" %>
+    <%= yield :javascript_includes %>
   </head>
 
   <body>
