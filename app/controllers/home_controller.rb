@@ -11,4 +11,13 @@ class HomeController < ApplicationController
     @foods = menu ? menu.foods : []
     console
   end
+
+  def search
+    if (params[:query])
+      query = params[:query]
+      @foods = Food.where("name ILIKE ?","%#{query}%")
+    else
+      @foods = Food.all
+    end
+  end
 end

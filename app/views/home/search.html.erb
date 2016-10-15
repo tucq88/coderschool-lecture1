@@ -1,5 +1,5 @@
 <section class="intro">
-  <h2>Our Menu</h2>
+  <h2>Your search result</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -7,15 +7,6 @@
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
-
-<ul class="nav nav-tabs">
-  <% Menu.all.each do |menu| %>
-    <li class="nav-item">
-      <%= link_to menu.name, menu_path(section: menu.name),
-          class: "nav-link #{'active' if params[:section] == menu.name}" %>
-    </li>
-  <% end %>
-</ul>
 
 <% if !@foods.empty? %>
   <table class="table table-striped table-foods" id="table-foods-menu">
@@ -37,13 +28,16 @@
     </tbody>
   </table>
 <% end %>
+<br>
 
 <% content_for :javascript_includes do %>
   <script type="text/javascript">
     $(document).ready(function() {
       $('#table-foods-menu').DataTable({
         "bFilter": false,
-        "bPaginate": false,
+        // "bPaginate": false,
+        "bLengthChange": false,
+        "pageLength": 5,
         "bInfo" : false
       });
       $('#table-foods-menu tbody').on( 'click', 'tr', function () {
