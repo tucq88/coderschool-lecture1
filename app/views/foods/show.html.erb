@@ -34,8 +34,8 @@
           <p><%= @food.menu.name %></p>
         </div>
 
-
       </div>
+
       <div class="col-xs-12 col-md-6">
         <div class="form-group">
           <label><strong>Image:</strong></label>
@@ -45,6 +45,12 @@
 
     </div>
 
+    <hr>
+
+    <%= form_tag(food_order_path(id: @food.id), method: "post", class: "text-xs-center") do %>
+      <%= hidden_field_tag(:food_id, @food.id) %>
+      <%= submit_tag("Order", class: "btn btn-danger") %>
+    <% end %>
 
   </div>
 </div>

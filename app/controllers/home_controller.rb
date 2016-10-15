@@ -7,6 +7,8 @@ class HomeController < ApplicationController
   end
 
   def menu
-    @foods = Menu.find_by(name: params[:section]).foods
+    menu = Menu.find_by(name: params[:section])
+    @foods = menu ? menu.foods : []
+    console
   end
 end

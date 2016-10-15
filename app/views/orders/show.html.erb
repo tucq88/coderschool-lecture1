@@ -1,0 +1,42 @@
+
+<div class="card">
+  <div class="card-header clearfix">
+    <h2 class="pull-xs-left">
+      <strong>Order : # <%= @order.id %></strong> -
+      Created at <%= @order.created_at.to_formatted_s(:long_ordinal) %>
+    </h2>
+    <div class="pull-xs-right">
+      <%= link_to "Back", menu_path, class: "btn btn-warning" %>
+    </div>
+  </div>
+  <div class="card-block">
+    <p id="notice"><%= notice %></p>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+          <label><strong>Name:</strong></label>
+          <p><%= @order.name %></p>
+        </div>
+
+        <div class="form-group">
+          <label><strong>Phone:</strong></label>
+          <p><%= @order.phone %></p>
+        </div>
+
+        <div class="form-group">
+          <label><strong>Address</strong></label>
+          <p><%= @order.address %></p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <%= render 'foods', foods: @foods %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

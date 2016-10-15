@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header clearfix">
+    <h2 class="pull-xs-left">New Order</h2>
+    <div class="pull-xs-right">
+      <!-- <%= link_to 'Back', menu_path, class: "btn btn-info" %> -->
+    </div>
+  </div>
+  <div class="card-block">
+    <%= render 'foods', foods: @foods %>
+
+    <%= render 'form', order: @order %>
+  </div>
+</div>

@@ -23,6 +23,12 @@ class FoodsController < ApplicationController
     @menus = Menu.all
   end
 
+  def order
+    session[:order].push({id: params[:food_id], total: 22})
+
+    redirect_to new_order_path()
+  end
+
   # POST /foods
   # POST /foods.json
   def create
