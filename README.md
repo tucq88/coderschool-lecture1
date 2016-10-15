@@ -11,9 +11,9 @@ URL: **[http://stark-coast-54840.heroku.com/](http://stark-coast-54840.heroku.co
 ## Required User Stories
 
 - [x] The User must be able to go two pages: Menu, and Contact Us.
-- [ ] The User can see the address and phone number on the contact us page.
-- [ ] The User can see a basic google map on the Contact Us page.
-- [ ] The User can navigate to a menu page with four sections:
+- [x] The User can see the address and phone number on the contact us page.
+- [x] The User can see a basic google map on the Contact Us page.
+- [x] The User can navigate to a menu page with four sections:
     - Breakfast
     - Lunch
     - Dinner
@@ -33,7 +33,7 @@ NOTE: there is nore than one way to do it.
 
 Note: Later you can add extra fields to the FoodItem model to accomplish the bonus extra tasks. Ask if you don't know how to generate a migration file to add extra fields.
 
-HINT: Video: [add FoodItem model as belongs_to Section](https://www.opentest.co/share/dedccf108f7411e6b6684df5d82020c7)(5m)
+HINT: Video: [add FoodItem model as belongs_to Section](https://www.opentest.co/share/5a37fb708f7611e6bf93e3017c5ac5b5)(5m)
 
 - [ ] The User should be able to filter by section of Breakfast, Lunch, Dinner, or Drinks and see only the relevant items.
 - [ ] The User can sort menu items by "alphabetical", "price low to high", and "price high to low".

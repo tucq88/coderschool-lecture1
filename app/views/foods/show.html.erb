@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header clearfix">
+    <h2 class="pull-xs-left">Food Details</h2>
+    <div class="pull-xs-right">
+      <%= link_to 'Edit', edit_food_path(@food), class: "btn btn-primary" %>
+      &nbsp;
+      <%= link_to 'Back', foods_path, class: "btn btn-warning" %>
+    </div>
+  </div>
+  <div class="card-block">
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @food.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @food.description %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @food.price %>
+    </p>
+
+    <p>
+      <strong>Menu:</strong>
+      <%= @food.menu.name %>
+    </p>
+
+    <p>
+      <strong>Image:</strong>
+      <%= image_tag(@food.show_image()) %>
+    </p>
+
+  </div>
+</div>

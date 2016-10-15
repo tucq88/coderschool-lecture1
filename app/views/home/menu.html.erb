@@ -1,0 +1,18 @@
+<section class="intro">
+  <h2>Our Menu</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+
+<ul class="nav nav-tabs">
+  <% Menu.all.each do |menu| %>
+    <li class="nav-item">
+      <%= link_to menu.name, menu_path(section: menu.name),
+          class: "nav-link #{'active' if params[:section] == menu.name}" %>
+    </li>
+  <% end %>
+</ul>

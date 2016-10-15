@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header clearfix">
+    <h2 class="pull-xs-left">Editing Food</h2>
+    <div class="pull-xs-right">
+      <%= link_to 'Show', @food, class: "btn btn-info" %>
+      &nbsp;
+      <%= link_to 'Back', foods_path, class: "btn btn-warning" %>
+    </div>
+  </div>
+  <div class="card-block">
+    <%= render 'form', food: @food, menus: @menus %>
+  </div>
+</div>

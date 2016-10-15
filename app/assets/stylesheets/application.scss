@@ -28,3 +28,21 @@
   height: 400px;
   width: 100%;
 }
+
+#error_explanation {
+  @extend .alert, .alert-danger;
+  h2 {
+    font-size: 18px;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.table-foods {
+  tr.food > td > img {
+    border: 1px solid #ccc;
+    padding: 2px;
+    max-height: 150px;
+  }
+}
