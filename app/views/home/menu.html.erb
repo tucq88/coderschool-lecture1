@@ -23,6 +23,7 @@
       <tr>
         <th>Name</th>
         <th>Price</th>
+        <th>Total view</th>
         <th>Image</th>
       </tr>
     </thead>
@@ -31,6 +32,7 @@
         <tr class="food" data-url="<%= food_path(food) %>">
           <td><%= food.name %></td>
           <td><%= food.price %></td>
+          <td><span class="tag tag-pull tag-success"><%= food.view %></span></td>
           <td><%= image_tag(food.show_image()) %></td>
         </tr>
       <% end %>

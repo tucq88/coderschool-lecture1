@@ -47,11 +47,11 @@ the order was created in human-readable format (for example, Tuesday, December 1
 
 ## Bonus User Stories
 - [ ] The User can also filter by type of Cuisine.
-- [ ] The User can see how many times each menu item has been viewed, and sort items by "most viewed".
+- [x] The User can see how many times each menu item has been viewed, and sort items by "most viewed".
 - [ ] The User can leave a review (1-5 stars) for each dish, along with a text review.
 - [ ] The User can see reviews and an average review score.
 - [ ] The user can input "CODERSCHOOL" as a coupon code on the order page, which should give a 50% discount off of the order.
-- [ ] The User can order more than one dish at a time.
+- [x] The User can order more than one dish at a time.
 - [ ] The User receives an email upon placing an order.
     - Read: [http://guides.rubyonrails.org/action_mailer_basics.html#sending-emails](http://guides.rubyonrails.org/action_mailer_basics.html#sending-emails)
 - [ ] User can receive text message confirming the order. Check out http://speedsms.vn/

@@ -14,25 +14,37 @@
     <div class="row">
 
       <div class="col-xs-12 col-md-6">
-        <div class="form-group">
-          <label><strong>Name:</strong></label>
-          <p><%= @food.name %></p>
-        </div>
 
-        <div class="form-group">
-          <label><strong>Description:</strong></label>
-          <p><%= @food.description %></p>
-        </div>
+        <fieldset>
+          <div class="form-group">
+            <label><strong>Name:</strong></label>
+            <p><%= @food.name %></p>
+          </div>
 
-        <div class="form-group">
-          <label><strong>Price:</strong></label>
-          <p><%= number_to_currency(@food.price, unit: "VND ") %></p>
-        </div>
+          <div class="form-group">
+            <label><strong>Description:</strong></label>
+            <p><%= @food.description %></p>
+          </div>
 
-        <div class="form-group">
-          <label><strong>Menu:</strong></label>
-          <p><%= @food.menu.name %></p>
-        </div>
+          <div class="form-group">
+            <label><strong>Price:</strong></label>
+            <p><%= number_to_currency(@food.price, unit: "VND ") %></p>
+          </div>
+
+          <div class="form-group">
+            <label><strong>Menu:</strong></label>
+            <p><%= @food.menu.name %></p>
+          </div>
+        </fieldset>
+
+        <hr>
+
+        <fieldset>
+          <div class="form-group">
+            <label><strong>Total view:</strong></label>
+            <p><span class="tag tag-pill tag-success"><%= @food.view %></span></p>
+          </div>
+        </fieldset>
 
       </div>
 

@@ -22,6 +22,8 @@
 }
 
 #search-food-form {
+  display: inline-block;
+
   @include max-screen(768px) {
     margin-top: 5px;
     padding-top: 10px;

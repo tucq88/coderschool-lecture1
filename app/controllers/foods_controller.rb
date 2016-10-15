@@ -10,6 +10,7 @@ class FoodsController < ApplicationController
   # GET /foods/1
   # GET /foods/1.json
   def show
+    @food.update_attributes(:view => @food.view + 1)
   end
 
   # GET /foods/new

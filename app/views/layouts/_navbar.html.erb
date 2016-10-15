@@ -14,6 +14,11 @@
         <li class="nav-item <%= is_active('home', 'contact') %>">
           <a class="nav-link" href="/contact">Contact Us</a>
         </li>
+        <% if !session[:order].empty? %>
+          <li class="nav-item">
+            <%= link_to 'My Order', new_order_path , class:"btn btn-outline-danger" %>
+          </li>
+        <% end %>
       </ul>
       <%= form_tag("/search", method: "get", class: "form-inline pull-xs-right", id: "search-food-form") do %>
         <%= text_field_tag 'query', params[:query],

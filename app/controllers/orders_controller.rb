@@ -20,8 +20,6 @@ class OrdersController < ApplicationController
     @order = Order.new
 
     @foods = self.get_placed_foods
-
-    console
   end
 
   # GET /orders/1/edit
