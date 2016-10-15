@@ -7,3 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # BreakfastMenu = Menu.create({name: 'Breakfast'})
 # BreakfastMenu.foods.create([])
+menus = Menu.create([{name: 'Breakfast'}, {name: 'Lunch'}, {name: 'Dinner'}, {name: 'Drinks'}])
+Menu.all.each do |menu|
+  5.times do
+    menu.foods.create({
+      name: Faker::Lorem.word,
+      description: Faker::Lorem.sentence,
+      price: Faker::Commerce.price,
+      image_url: Faker::Placeholdit.image("500x500")
+    })
+  end
+end

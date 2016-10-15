@@ -21,6 +21,28 @@
   }
 }
 
+#search-food-form {
+  @include max-screen(768px) {
+    margin-top: 5px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+  }
+
+  > input {
+    @include max-screen(768px) {
+      max-width: 50%;
+      float: left;
+      margin-right: 10px;
+    }
+
+    @include max-screen(480px) {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .nav-item.active > a {
   text-decoration: underline;
 }
