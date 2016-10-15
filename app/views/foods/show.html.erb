@@ -9,7 +9,9 @@
   </div>
   <div class="card-block">
 
-    <p id="notice"><%= notice %></p>
+    <% if notice %>
+      <p class="alert alert-success" role="alert"><%= notice %></p>
+    <% end %>
 
     <div class="row">
 
