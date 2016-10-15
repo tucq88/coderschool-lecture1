@@ -5,6 +5,7 @@ class FoodsController < ApplicationController
   # GET /foods.json
   def index
     @foods = Food.all
+    session[:order] = nil
   end
 
   # GET /foods/1
@@ -27,7 +28,7 @@ class FoodsController < ApplicationController
   def order
     if (session[:order].nil?) session[:order] = []
 
-    session[:order].push({id: params[:food_id]})
+    session[:order].push({id: params[:food_id], total: 22})
     redirect_to new_order_path()
   end
 

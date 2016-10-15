@@ -4,7 +4,7 @@
 
 Submitted by: **Tu, Chu Quang**
 
-Time spent: **0** hours spent in total
+Time spent: **14** hours spent in total
 
 URL: **[http://stark-coast-54840.heroku.com/](http://stark-coast-54840.heroku.com/)**
 
@@ -23,7 +23,7 @@ HINT: Video: [add a Section model and seed data](https://www.opentest.co/share/d
 
 NOTE: there is nore than one way to do it.
 
-- [ ] The user should see at least 5 food items in each section.
+- [x] The user should see at least 5 food items in each section.
 - [x] Each food item should have the following fields:
     - Name (Canh Chua)
     - Description (Delicious fish soup)
