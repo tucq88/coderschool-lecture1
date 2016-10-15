@@ -1,40 +1,50 @@
 <div class="card">
   <div class="card-header clearfix">
-    <h2 class="pull-xs-left">Food Details</h2>
+    <h2 class="pull-xs-left"><strong><%= @food.menu.name %> / <%= @food.name %></strong></h2>
     <div class="pull-xs-right">
-      <%= link_to 'Edit', edit_food_path(@food), class: "btn btn-primary" %>
-      &nbsp;
-      <%= link_to 'Back', foods_path, class: "btn btn-warning" %>
+      <%= link_to "Back",
+          request.referer.present? ? request.referer : menu_path(params: {section: @food.menu.name}),
+          class: "btn btn-warning" %>
     </div>
   </div>
   <div class="card-block">
 
     <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @food.name %>
-    </p>
+    <div class="row">
 
-    <p>
-      <strong>Description:</strong>
-      <%= @food.description %>
-    </p>
+      <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+          <label><strong>Name:</strong></label>
+          <p><%= @food.name %></p>
+        </div>
 
-    <p>
-      <strong>Price:</strong>
-      <%= @food.price %>
-    </p>
+        <div class="form-group">
+          <label><strong>Description:</strong></label>
+          <p><%= @food.description %></p>
+        </div>
 
-    <p>
-      <strong>Menu:</strong>
-      <%= @food.menu.name %>
-    </p>
+        <div class="form-group">
+          <label><strong>Price:</strong></label>
+          <p><%= number_to_currency(@food.price, unit: "VND ") %></p>
+        </div>
 
-    <p>
-      <strong>Image:</strong>
-      <%= image_tag(@food.show_image()) %>
-    </p>
+        <div class="form-group">
+          <label><strong>Menu:</strong></label>
+          <p><%= @food.menu.name %></p>
+        </div>
+
+
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+          <label><strong>Image:</strong></label>
+          <p><%= image_tag(@food.show_image(), class: "img-fluid img-thumbnail") %></p>
+        </div>
+      </div>
+
+    </div>
+
 
   </div>
 </div>

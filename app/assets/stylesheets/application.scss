@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "_pagination";
+@import "_dataTable";
 
 @mixin max-screen($max) {
   @media only screen and (max-width: $max) {
@@ -45,4 +46,8 @@
     padding: 2px;
     max-height: 150px;
   }
+}
+
+#table-foods-menu tbody > tr:hover {
+  cursor: pointer;
 }

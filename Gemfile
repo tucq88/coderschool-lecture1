@@ -32,6 +32,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 gem 'will_paginate', '~> 3.1.0'
+gem 'jquery-datatables-rails', '~> 3.4.0'
 
 gem 'rails_12factor', group: 'production'
 
