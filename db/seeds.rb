@@ -13,7 +13,7 @@ Menu.all.each do |menu|
     menu.foods.create({
       name: Faker::Lorem.word,
       description: Faker::Lorem.sentence,
-      price: Faker::Commerce.price,
+      price: Faker::Commerce.price * 2000,
       image_url: Faker::Placeholdit.image("500x500")
     })
   end

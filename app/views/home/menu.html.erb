@@ -37,13 +37,16 @@
     </tbody>
   </table>
 <% end %>
+<br>
 
 <% content_for :javascript_includes do %>
   <script type="text/javascript">
     $(document).ready(function() {
       $('#table-foods-menu').DataTable({
         "bFilter": false,
-        "bPaginate": false,
+        // "bPaginate": false,
+        "bLengthChange": false,
+        "pageLength": 5,
         "bInfo" : false
       });
       $('#table-foods-menu tbody').on( 'click', 'tr', function () {
