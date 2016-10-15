@@ -27,7 +27,7 @@ class FoodsController < ApplicationController
   def order
     if (session[:order].nil?) session[:order] = []
 
-    session[:order].push({id: params[:food_id], total: 22})
+    session[:order].push({id: params[:food_id]})
     redirect_to new_order_path()
   end
 
